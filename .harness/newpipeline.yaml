@@ -1,0 +1,32 @@
+pipeline:
+  name: new-pipeline
+  identifier: newpipeline
+  projectIdentifier: newone
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: new-stage1
+        identifier: newstage1
+        description: ""
+        type: Approval
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: manual-approval
+                  identifier: manualapproval
+                  type: HarnessApproval
+                  timeout: 1d
+                  spec:
+                    approvalMessage: |-
+                      Please review the following information
+                      and approve the pipeline progression
+                    includePipelineExecutionHistory: true
+                    approvers:
+                      minimumCount: 1
+                      disallowPipelineExecutor: false
+                      userGroups:
+                        - account._account_all_users
+                    approverInputs: []
+        tags: {}
