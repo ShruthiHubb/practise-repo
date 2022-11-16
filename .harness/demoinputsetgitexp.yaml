@@ -13,7 +13,7 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: servicek8demo
+            serviceRef: service1
             serviceInputs:
               serviceDefinition:
                 type: Kubernetes
@@ -81,6 +81,4 @@ pipeline:
                 - AllErrors
               action:
                 type: StageRollback
-  connectorRef: githubforgitexperience
   storeType: REMOTE
-  filePath: .harness/demoinputsetgitexp.yaml
