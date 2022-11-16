@@ -23,10 +23,10 @@ pipeline:
                       primaryArtifactRef: <+input>
                       sources: <+input>
           environment:
-            environmentRef: envdemoss
+            environmentRef: env4
             deployToAll: false
             infrastructureDefinitions:
-              - identifier: infrafordemos
+              - identifier: infrademo
           execution:
             steps:
               - stepGroup:
