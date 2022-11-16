@@ -1,5 +1,5 @@
 pipeline:
-  name: demo-git-exp-for-blog
+  name: demo-git-exp-for-blogs
   identifier: demogitexpforblog
   projectIdentifier: demoinputsets
   orgIdentifier: default
