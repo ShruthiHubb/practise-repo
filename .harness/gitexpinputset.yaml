@@ -1,0 +1,26 @@
+inputSet:
+  identifier: "gitexpinputset"
+  pipeline:
+    identifier: "demogitexpforblog"
+    stages:
+    - stage:
+        identifier: "deployapp"
+        type: "Deployment"
+        spec:
+          service:
+            serviceRef: "service2demo"
+            serviceInputs:
+              serviceDefinition:
+                type: "Kubernetes"
+                spec:
+                  artifacts:
+                    primary:
+                      primaryArtifactRef: ""
+                      sources: ""
+          environment:
+            environmentRef: "env4"
+            infrastructureDefinitions:
+            - identifier: "infrademo"
+  name: "git-exp-input-set"
+  orgIdentifier: "default"
+  projectIdentifier: "demoinputsets"
