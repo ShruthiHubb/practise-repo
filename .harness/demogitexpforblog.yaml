@@ -13,7 +13,15 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: service2demo
+            serviceRef: servicek8demo
+            serviceInputs:
+              serviceDefinition:
+                type: Kubernetes
+                spec:
+                  artifacts:
+                    primary:
+                      primaryArtifactRef: <+input>
+                      sources: <+input>
           environment:
             environmentRef: envdemoss
             deployToAll: false
