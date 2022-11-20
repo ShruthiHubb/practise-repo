@@ -1,4 +1,2 @@
 # practise-repo
-
-Hi dear, how are you?
-
+Let us learn rebasing!
