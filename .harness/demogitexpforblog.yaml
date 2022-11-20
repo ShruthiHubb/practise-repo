@@ -13,20 +13,14 @@ pipeline:
         spec:
           deploymentType: Kubernetes
           service:
-            serviceRef: servicek8demo
-            serviceInputs:
-              serviceDefinition:
-                type: Kubernetes
-                spec:
-                  artifacts:
-                    primary:
-                      primaryArtifactRef: <+input>
-                      sources: <+input>
+            serviceRef: <+input>
+            serviceInputs: <+input>
           environment:
-            environmentRef: envdemoss
+            environmentRef: <+input>
             deployToAll: false
-            infrastructureDefinitions:
-              - identifier: infrafordemos
+            environmentInputs: <+input>
+            serviceOverrideInputs: <+input>
+            infrastructureDefinitions: <+input>
           execution:
             steps:
               - stepGroup:
