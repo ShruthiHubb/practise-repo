@@ -1,2 +1,3 @@
 adding my first line to test it!
 want to add line from remote!
+adding lines to bring in conflict
