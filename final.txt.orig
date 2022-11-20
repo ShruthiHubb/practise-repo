@@ -1,0 +1,6 @@
+added line!
+<<<<<<< HEAD
+adding second line!
+=======
+adding line from what I learned!
+>>>>>>> ebedf3b (added line from local)
